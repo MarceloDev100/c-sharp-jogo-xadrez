@@ -40,6 +40,11 @@ namespace xadrez_console
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
                     }
+                    catch(Exception e) 
+                    {
+                        Console.WriteLine("Exceção inesperada: " + e.Message);
+                        Console.ReadLine();
+                    }
                 }
                 Console.Clear();
                 Tela.ImprimirPartida(partida);
@@ -48,6 +53,11 @@ namespace xadrez_console
             catch (TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exceção inesperada: " + e.Message);
+                Console.ReadLine();
             }
         }
     }
